@@ -17,7 +17,7 @@ var mexicoCapitalQuiz = [
   ["Nayarit", "TEPIC"],
   ["Estado de Mexico", "TOLUCA"],
   ["Zacatecas", "ZACATECAS"],
-  ["Ciudad de Mexico", "DISTRITO FEDERAL"],
+  ["Distrito Federal (answer in Spanish)", "CIUDAD DE MEXICO"],
   ["Campeche", "CAMPECHE"],
   ["Veracruz", "XALAPA"],
   ["Puebla", "PUEBLA"],
@@ -37,7 +37,7 @@ var mexicoCapitalQuiz = [
 
 //Button one to give the user instructions on how to play
 function promptIntro(){
-	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct! Click the next button on the home page to begin the quiz! The results of your quiz will display on another page upon completing the quiz. :) ");
+	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct. Click the next button on the home page to begin the quiz! :) ");
 }
 
 //Quiz function to ask user for the capital of each state in Mexico
@@ -51,11 +51,16 @@ function promptMe(){
 				
 					var question = prompt("What is the capital of the state of " + quiz[i][0] + "?");
 
+//In this section I commented out the two lines of code that were logging the answers at the end of the quiz on another page.
+//I decided that I prefer to alert the user to the correct or incorrect answers immediately after answering each question.
+
 						if (question.toUpperCase() === (quiz[i][1])){
-							listHTML += '<li>' + 'Correct!  ' + '<b>' +  quiz[i][1] + '</b>' + ' is the capital of the state of ' + '<b>' + quiz[i][0] + '</b>' + '.' + ' Giving you one more point for a total of ' + (score += 1)  + '</li>';
-						} else {
-							listHTML += '<li>' + ' Sorry cabrón! You answered the capital of ' + '<b>' + quiz[i][0] + '</b>' + ' incorrectly. The correct answer was ' + '<b>' + quiz[i][1] + '</b>' +  '. Your score remains at ' + (score) + ' Better luck next time!';
-						}
+							//listHTML += '<li>' + 'Correct!  ' + '<b>' +  quiz[i][1] + '</b>' + ' is the capital of the state of ' + '<b>' + quiz[i][0] + '</b>' + '.' + ' Giving you one more point for a total of ' + (score += 1)  + '</li>';
+						  alert('That is correct! ' + quiz[i][1] + ' is the capital of ' + quiz[i][0] + '. You scored one more point for a total of ' + (score += 1) + ' points.');
+            } else {
+							//listHTML += '<li>' + ' Sorry cabrón! You answered the capital of ' + '<b>' + quiz[i][0] + '</b>' + ' incorrectly. The correct answer was ' + '<b>' + quiz[i][1] + '</b>' +  '. Your score remains at ' + (score) + ' Better luck next time!';
+						  alert('Sorry, that\'s incorrect! The correct capital of ' + quiz[i][0] + ' is ' + quiz[i][1] + '. Your score remains at ' + (score) + '.');
+            }
 	   		}
       // Switched these two lines
     	listHTML += '</ol>';
@@ -75,7 +80,7 @@ if (score === 0){
 } else if (score >= 20 && score < 25){
     document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. Great job!</p>');
 } else if (score >= 25 && score < 31){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. So close to perfection! You\'re right there!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. So close to perfection! Try again for that 100%!</p>');
 } else {
     document.write('<p>You got ' + (score) + ' questions correct out of a total of 31!!! PERFECTION!!! Muy excellente amigo!!!</p>');
 };
