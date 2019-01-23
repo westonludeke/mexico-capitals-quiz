@@ -1,3 +1,32 @@
+/*body {
+background: rgb(0,104,71);
+background: linear-gradient(90deg, rgba(0,104,71,1) 0%, rgba(255,255,255,1) 49%, rgba(206,17,38,1) 100%);
+}*/
+
+img {
+  border-radius: 8px;
+}
+
+.buttonOne {
+  background-color: #006847;
+  color: white;
+  border-radius: 8px;
+  padding: 7px 7px 7px 7px;
+}
+
+.buttonTwo {
+  background-color: #CE1126;
+  color: white;
+  border-radius: 8px;
+  padding: 7px 7px 7px 7px;
+}
+
+/*#grad {
+  background-image: linear-gradient(green, white, red);
+}*/
+
+/*All of the code below is from Treehouse*/
+
 @import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
 
 /*General*/
