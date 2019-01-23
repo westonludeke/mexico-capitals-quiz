@@ -68,9 +68,6 @@ function promptMe(){
 		  
 
 //adding up the total number of questions answered correctly and telling the user how they did
-
-//code was wrong, need to double-check the logic
-
 if (score === 0){
   document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. Time for you to study up!</p>');
 } else if (score >= 1 && score < 10){
@@ -89,8 +86,6 @@ if (score === 0){
 		}
 		printQuiz(mexicoCapitalQuiz);
 }
-
- //Code not used but saving ["Tabasco", "Villahermosa", "<img src='https://i.imgur.com/jv8yWZK.jpg'>"],
 
 
 
