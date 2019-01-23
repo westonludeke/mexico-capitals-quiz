@@ -2,7 +2,7 @@
 
 ## What this is:
 
-A simple quiz in JavaScript on the capitals of the 31 Mexican states. Built this project to learn two dimentional arrays as part of the Treehouse "Beginning JavaScript" course.
+A simple quiz in JavaScript on the capitals of the 31 Mexican states. I built this project to learn two dimentional arrays as part of the Treehouse "Beginning JavaScript" course. [You can click here to view the project live, via GitHub Pages](https://westonludeke.github.io/mexico-capitals-quiz/)
 
 ## More:
 
