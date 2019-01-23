@@ -1,7 +1,8 @@
-/*body {
-background: rgb(0,104,71);
-background: linear-gradient(90deg, rgba(0,104,71,1) 0%, rgba(255,255,255,1) 49%, rgba(206,17,38,1) 100%);
-}*/
+.content {
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+}
 
 img {
   border-radius: 8px;
@@ -25,12 +26,12 @@ img {
   background-image: linear-gradient(green, white, red);
 }*/
 
-/*All of the code below is from Treehouse*/
+/*All of the code below is from Treehouse and commeted out because I decided I no longer needed it. */
 
 @import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
 
 /*General*/
-body {
+/*body {
   background: #fff;
   max-width: 980px;
   margin: 0 auto;
@@ -89,9 +90,9 @@ h3 em {
   margin: 0 0 10px 5px;
   padding: 0;
   color: #8d9aa5;
-}
+}*/
 
-ol {
+/*ol {
   margin: 0 0 20px 32px;
   padding: 0;
 }
@@ -143,4 +144,4 @@ li {
 
 span {
   color: red;
-}
+}*/
