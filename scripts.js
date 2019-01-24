@@ -70,17 +70,17 @@ function promptMe(){
 
 //adding up the total number of questions answered correctly and telling the user how they did
 if (score === 0){
-  document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. Time for you to study up!</p>');
+  document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Time for you to study up!</p>');
 } else if (score >= 1 && score < 10){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. Decent job! With a little more hard work you\'ll be able to bring up your score in no time!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Decent job! With a little more hard work you\'ll be able to bring up your score in no time!</p>');
 } else if (score >= 10 && score < 20){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. You\'re making good progress, but keep working hard!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. You\'re making good progress, but keep working hard!</p>');
 } else if (score >= 20 && score < 25){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. Great job!</p>');
-} else if (score >= 25 && score < 31){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. So close to perfection! Try again for that 100%!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Great job, you\'re almost there!</p>');
+} else if (score >= 25 && score < 32){
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. ¡¡¡MUY EXCELLENTE!!! So close to perfection! Try again for that 100%!</p>');
 } else {
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31!!! PERFECTION!!! Muy excellente amigo (or amiga)!!!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32!!! ¡¡¡PERFECTION!!! ¡¡¡VIVA MÉXICO CABRÓNES!!!</p>');
 };
 
     document.write('<p>Refresh the page to return home</p>');
