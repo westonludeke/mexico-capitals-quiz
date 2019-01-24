@@ -3,41 +3,42 @@ var score = 0;
 //List of Mexican States with their corresponding capital city
 var mexicoCapitalQuiz = [
   ["Tabasco", "VILLAHERMOSA"],
-  ["Nuevo Leon", "MONTERREY"],
-  ["Sinaloa", "CULIACAN"],
+  ["Nuevo León", "MONTERREY"],
+  ["Sinaloa", "CULIACÁN"],
   ["Coahuila", "SALTILLO"],
   ["Baja California", "MEXICALI"],
   ["Durango", "DURANGO"],
   ["Tamaulipas", "CIUDAD VICTORIA"],
   ["Oaxaca", "OAXACA"],
-  ["Chiapas", "TUXTLA GUITIERREZ"],
-  ["San Luis Potosi", "SAN LUIS POTOSI"],
+  ["Chiapas", "TUXTLA GUTIÉRREZ"],
+  ["San Luis Potosí", "SAN LUIS POTOSÍ"],
   ["Chihuahua", "CHIHUAHUA"],
-  ["Michoacan", "MORELIA"],
+  ["Michoacán", "MORELIA"],
   ["Nayarit", "TEPIC"],
   ["Estado de Mexico", "TOLUCA"],
   ["Zacatecas", "ZACATECAS"],
-  ["Distrito Federal (answer in Spanish)", "CIUDAD DE MEXICO"],
+  ["Distrito Federal (answer in Spanish)", "CIUDAD DE MÉXICO"],
   ["Campeche", "CAMPECHE"],
   ["Veracruz", "XALAPA"],
   ["Puebla", "PUEBLA"],
   ["Hidalgo", "PACHUCA"],
   ["Morelos", "CUERNAVACA"],
-  ["Yucatan", "MERIDA"],
-  ["Queretaro", "QUERETARO"],
+  ["Tlaxcala", "TLAXCALA"]
+  ["Yucatán", "MÉRIDA"],
+  ["Querétaro", "QUERÉTARO"],
   ["Colima", "COLIMA"],
   ["Jalisco", "GUADALAJARA"],
   ["Baja California Sur", "LA PAZ"],
   ["Sonora", "HERMOSILLO"],
   ["Aguascalientes", "AGUASCALIENTES"],
-  ["Guerrero", "CHILPANCIGO"],
+  ["Guerrero", "CHILPANCINGO"],
   ["Quintana Roo", "CHETUMAL"],
   ["Guanajuato", "GUANAJUATO"]
 ]
 
 //Button one to give the user instructions on how to play
 function promptIntro(){
-	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct. Click the next button on the home page to begin the quiz! :) ");
+	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states, plus the DF. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct. Click the next button on the home page to begin the quiz! :) ");
 }
 
 //Quiz function to ask user for the capital of each state in Mexico
@@ -79,7 +80,7 @@ if (score === 0){
 } else if (score >= 25 && score < 31){
     document.write('<p>You got ' + (score) + ' questions correct out of a total of 31. So close to perfection! Try again for that 100%!</p>');
 } else {
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31!!! PERFECTION!!! Muy excellente amigo!!!</p>');
+    document.write('<p>You got ' + (score) + ' questions correct out of a total of 31!!! PERFECTION!!! Muy excellente amigo (or amiga)!!!</p>');
 };
 
     document.write('<p>Refresh the page to return home</p>');
