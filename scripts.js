@@ -23,7 +23,7 @@ var mexicoCapitalQuiz = [
   ["Puebla", "PUEBLA"],
   ["Hidalgo", "PACHUCA"],
   ["Morelos", "CUERNAVACA"],
-  ["Tlaxcala", "TLAXCALA"]
+  ["Tlaxcala", "TLAXCALA"],
   ["Yucatán", "MÉRIDA"],
   ["Querétaro", "QUERÉTARO"],
   ["Colima", "COLIMA"],
@@ -48,7 +48,7 @@ function promptMe(){
 	}
 		function printQuiz(quiz) {
 			var listHTML = '<ol>';
-			for (var i = 0; i < quiz.length; i += 1){
+      for (var i = 0; i < quiz.length; i += 1){
 				
 					var question = prompt("What is the capital of the state of " + quiz[i][0] + "?");
 
