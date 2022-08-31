@@ -1,6 +1,6 @@
 let userScore = 0;
 
-var mexicoCapitalQuiz = [
+const listOfStatesAndCapitals = [
   ['Tabasco', 'Villahermosa'],
   ['Nuevo León', 'Monterrey'],
   ['Sinaloa', 'Culiacán'],
@@ -46,8 +46,11 @@ function promptMe(){
 		function printQuiz(quiz) {
 			var listHTML = '<ol>';
       for (var i = 0; i < quiz.length; i += 1){
-					var question = prompt("What is the capital of the state of " + quiz[i][0] + "?");
-						if (question.toUpperCase() === (quiz[i][1])){
+					let question = prompt("What is the capital of the state of " + quiz[i][0] + "?");
+          question = question.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          let answer = quiz[i][1].toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+          
+						if (question === answer){
 						  alert('That is correct! ' + quiz[i][1] + ' is the capital of ' + quiz[i][0] + '. You scored one more point for a total of ' + (userScore += 1) + ' points.');
             } else {
 						  alert('Sorry, that\'s incorrect! The correct capital of ' + quiz[i][0] + ' is ' + quiz[i][1] + '. Your score remains at ' + (userScore) + '.');
@@ -72,7 +75,7 @@ if (userScore === 0){
 
     document.write('<p>Refresh the page to return home</p>');
 		}
-		printQuiz(mexicoCapitalQuiz);
+		printQuiz(listOfStatesAndCapitals);
 }
 
 
