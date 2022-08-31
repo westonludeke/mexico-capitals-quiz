@@ -73,9 +73,9 @@ if (userScore === 0){
 } else if (userScore >= 1 && userScore < 10){
     document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. Decent job! With a little more hard work you\'ll be able to bring up your score in no time!</p>');
 } else if (userScore >= 10 && userScore < 20){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. You\'re making good progress, but keep working hard!</p>');
+    document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. You\'re making good progress, but keep working hard!</p>');
 } else if (userScore >= 20 && userScore < 25){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Great job, you\'re almost there!</p>');
+    document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. Great job, you\'re almost there!</p>');
 } else if (userScore >= 25 && userScore < 32){
     document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. ¡¡¡MUY EXCELLENTE!!! So close to perfection! Try again for that 100%!</p>');
 } else {
