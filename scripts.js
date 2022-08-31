@@ -1,6 +1,5 @@
-//The user's total score
-var score = 0;
-//List of Mexican States with their corresponding capital city
+let userScore = 0;
+
 var mexicoCapitalQuiz = [
   ["Tabasco", "VILLAHERMOSA"],
   ["Nuevo León", "MONTERREY"],
@@ -57,10 +56,10 @@ function promptMe(){
 
 						if (question.toUpperCase() === (quiz[i][1])){
 							//listHTML += '<li>' + 'Correct!  ' + '<b>' +  quiz[i][1] + '</b>' + ' is the capital of the state of ' + '<b>' + quiz[i][0] + '</b>' + '.' + ' Giving you one more point for a total of ' + (score += 1)  + '</li>';
-						  alert('That is correct! ' + quiz[i][1] + ' is the capital of ' + quiz[i][0] + '. You scored one more point for a total of ' + (score += 1) + ' points.');
+						  alert('That is correct! ' + quiz[i][1] + ' is the capital of ' + quiz[i][0] + '. You scored one more point for a total of ' + (userScore += 1) + ' points.');
             } else {
 							//listHTML += '<li>' + ' Sorry cabrón! You answered the capital of ' + '<b>' + quiz[i][0] + '</b>' + ' incorrectly. The correct answer was ' + '<b>' + quiz[i][1] + '</b>' +  '. Your score remains at ' + (score) + ' Better luck next time!';
-						  alert('Sorry, that\'s incorrect! The correct capital of ' + quiz[i][0] + ' is ' + quiz[i][1] + '. Your score remains at ' + (score) + '.');
+						  alert('Sorry, that\'s incorrect! The correct capital of ' + quiz[i][0] + ' is ' + quiz[i][1] + '. Your score remains at ' + (userScore) + '.');
             }
 	   		}
       // Switched these two lines
@@ -69,18 +68,18 @@ function promptMe(){
 		  
 
 //adding up the total number of questions answered correctly and telling the user how they did
-if (score === 0){
-  document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Time for you to study up!</p>');
-} else if (score >= 1 && score < 10){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Decent job! With a little more hard work you\'ll be able to bring up your score in no time!</p>');
-} else if (score >= 10 && score < 20){
+if (userScore === 0){
+  document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. Time for you to study up!</p>');
+} else if (userScore >= 1 && userScore < 10){
+    document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. Decent job! With a little more hard work you\'ll be able to bring up your score in no time!</p>');
+} else if (userScore >= 10 && userScore < 20){
     document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. You\'re making good progress, but keep working hard!</p>');
-} else if (score >= 20 && score < 25){
+} else if (userScore >= 20 && userScore < 25){
     document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. Great job, you\'re almost there!</p>');
-} else if (score >= 25 && score < 32){
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32. ¡¡¡MUY EXCELLENTE!!! So close to perfection! Try again for that 100%!</p>');
+} else if (userScore >= 25 && userScore < 32){
+    document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. ¡¡¡MUY EXCELLENTE!!! So close to perfection! Try again for that 100%!</p>');
 } else {
-    document.write('<p>You got ' + (score) + ' questions correct out of a total of 32!!! ¡¡¡PERFECTION!!! ¡¡¡VIVA MÉXICO CABRÓNES!!!</p>');
+    document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32!!! ¡¡¡PERFECTION!!! ¡¡¡VIVA MÉXICO CABRÓNES!!!</p>');
 };
 
     document.write('<p>Refresh the page to return home</p>');
