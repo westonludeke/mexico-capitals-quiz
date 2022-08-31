@@ -35,12 +35,10 @@ var mexicoCapitalQuiz = [
   ["Guanajuato", "GUANAJUATO"]
 ]
 
-//Button one to give the user instructions on how to play
 function promptIntro(){
 	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states, plus the DF. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct. Click the next button on the home page to begin the quiz! :) ");
 }
 
-//Quiz function to ask user for the capital of each state in Mexico
 function promptMe(){
 	function print(message) {
 	  document.write(message);
@@ -48,26 +46,16 @@ function promptMe(){
 		function printQuiz(quiz) {
 			var listHTML = '<ol>';
       for (var i = 0; i < quiz.length; i += 1){
-				
 					var question = prompt("What is the capital of the state of " + quiz[i][0] + "?");
-
-//In this section I commented out the two lines of code that were logging the answers at the end of the quiz on another page.
-//I decided that I prefer to alert the user to the correct or incorrect answers immediately after answering each question.
-
 						if (question.toUpperCase() === (quiz[i][1])){
-							//listHTML += '<li>' + 'Correct!  ' + '<b>' +  quiz[i][1] + '</b>' + ' is the capital of the state of ' + '<b>' + quiz[i][0] + '</b>' + '.' + ' Giving you one more point for a total of ' + (score += 1)  + '</li>';
 						  alert('That is correct! ' + quiz[i][1] + ' is the capital of ' + quiz[i][0] + '. You scored one more point for a total of ' + (userScore += 1) + ' points.');
             } else {
-							//listHTML += '<li>' + ' Sorry cabrón! You answered the capital of ' + '<b>' + quiz[i][0] + '</b>' + ' incorrectly. The correct answer was ' + '<b>' + quiz[i][1] + '</b>' +  '. Your score remains at ' + (score) + ' Better luck next time!';
 						  alert('Sorry, that\'s incorrect! The correct capital of ' + quiz[i][0] + ' is ' + quiz[i][1] + '. Your score remains at ' + (userScore) + '.');
             }
 	   		}
-      // Switched these two lines
     	listHTML += '</ol>';
       print(listHTML);
 		  
-
-//adding up the total number of questions answered correctly and telling the user how they did
 if (userScore === 0){
   document.write('<p>You got ' + (userScore) + ' questions correct out of a total of 32. Time for you to study up!</p>');
 } else if (userScore >= 1 && userScore < 10){
