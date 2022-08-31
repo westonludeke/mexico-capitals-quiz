@@ -36,7 +36,7 @@ const listOfStatesAndCapitals = [
 ]
 
 function promptIntro(){
-	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states, plus the DF. Simply type in your answer in the form field in the prompt. Proper spelling and accents are required to be correct. Click the next button on the home page to begin the quiz!");
+	alert("Welcome to the Capitals of Mexico Quiz! This is a quiz on the capitals of each of Mexico's 31 states, plus the Distrito Federal. Duringt the quiz, simply type in your answer in the form field when prompted. Proper spelling matters, however case and accents don't matter. Click the next button on the home page to begin the quiz!");
 }
 
 function promptMe(){
