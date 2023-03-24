@@ -3,19 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Capitals of Mexico Quiz</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
+<style>
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.buttonOne {
+  background-color: #006847;
+  color: white;
+  border-radius: 8px;
+  padding: 7px 7px 7px 7px;
+}
+
+.buttonTwo {
+  background-color: #CE1126;
+  color: white;
+  border-radius: 8px;
+  padding: 7px 7px 7px 7px;
+}
+
+@import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
+
+</style>
+
 </head>
 <body>
 
 <div class="content">	
-	<center>
 		<br><br>
 		<h1>Capitals of Mexico Quiz</h1>
 		<br>
 		
 		<img src="https://i.imgur.com/agRPqqC.jpg" alt="Mexico flag" width="400"> 
 		<br><br>
-		
 		
 		<input type="button" class="buttonOne" value="How to play" onclick="promptIntro()">
 		<br><br>
@@ -28,7 +61,6 @@
     Built by: Weston Ludeke<br>
 		<small>Mexican flag image via Unsplash user @jorgeaguilar</small>
 	</footer>
-	</center>
 </div>
 
 <script src="scripts.js"></script>
