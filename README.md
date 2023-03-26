@@ -1,5 +1,9 @@
 # Mexico Capitals Quiz
 
+## Update
+
+I originally built this project before studying at Launch School. As I near the completion of Launch School's core curriculum, I'm currently working on rebuild of this project from the ground up. At the moment, it is still a work in progress.
+
 ## What this is:
 
 I built a quiz in JavaScript to test users on the capitals of the 31 Mexican states. I built this project while learning two dimensional arrays as part of the Treehouse "Beginning JavaScript" course. [You can click here to view the project live, via GitHub Pages](https://westonludeke.github.io/mexico-capitals-quiz/)
