@@ -1,25 +1,33 @@
-.content {
-  max-width: 500px;
-  margin: auto;
-  padding: 10px;
+#quiz-container {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
 }
-
-img {
-  border-radius: 8px;
+.question {
+  margin: 20px 0;
+  font-size: 20px;
 }
-
-.buttonOne {
-  background-color: #006847;
+.answer-input {
+  margin: 20px 0;
+  font-size: 20px;
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #4CAF50;
   color: white;
-  border-radius: 8px;
-  padding: 7px 7px 7px 7px;
+  border: none;
+  margin: 20px 5px;
+  cursor: pointer;
 }
-
-.buttonTwo {
-  background-color: #CE1126;
-  color: white;
-  border-radius: 8px;
-  padding: 7px 7px 7px 7px;
+.button:hover {
+  background-color: #3e8e41;
 }
-
-@import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
+.score {
+  font-size: 30px;
+}

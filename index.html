@@ -1,58 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Capitals of Mexico Quiz</title>
+  <title>Quiz: Mexican State Capitals</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
 
-  <style>
-    @import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
+$(document).ready(function() {
+    const stateCapitals = [
+      ['Aguascalientes', 'Aguascalientes'],
+      ['Baja California', 'Mexicali'],
+      ['Baja California Sur', 'La Paz'],
+      ['Campeche', 'San Francisco de Campeche'],
+      ['Chiapas', 'Tuxtla Gutiérrez'],
+      ['Chihuahua', 'Chihuahua'],
+      ['Coahuila', 'Saltillo'],
+      ['Colima', 'Colima'],
+      ['Durango', 'Durango'],
+      ['Guanajuato', 'Guanajuato'],
+      ['Guerrero', 'Chilpancingo'],
+      ['Hidalgo', 'Pachuca'],
+      ['Jalisco', 'Guadalajara'],
+      ['Mexico', 'Toluca'],
+      ['Michoacán', 'Morelia'],
+      ['Morelos', 'Cuernavaca'],
+      ['Nayarit', 'Tepic'],
+      ['Nuevo León', 'Monterrey'],
+      ['Oaxaca', 'Oaxaca'],
+      ['Puebla', 'Puebla'],
+      ['Querétaro', 'Querétaro'],
+      ['Quintana Roo', 'Chetumal'],
+      ['San Luis Potosí', 'San Luis Potosí'],
+      ['Sinaloa', 'Culiacán'],
+      ['Sonora', 'Hermosillo'],
+      ['Tabasco', 'Villahermosa'],
+      ['Tamaulipas', 'Ciudad Victoria'],
+      ['Tlaxcala', 'Tlaxcala'],
+      ['Veracruz', 'Xalapa'],
+      ['Yucatán', 'Mérida'],
+      ['Zacatecas', 'Zacatecas']
+    ];
 
-    main {
-      max-width: 500px;
-      margin: auto;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    // Shuffle the stateCapitals array
+    stateCapitals.sort(() => Math.random() - 0.5);
+
+    // Define global variables
+    let numCorrect = 0;
+    let numAsked = 0;
+    let currentState = 0;
+
+    // Update the quiz question
+    function updateQuestion() {
+      $("#question").text("What is the capital of " + stateCapitals[currentState][0] + "?");
     }
 
-    img {
-      border-radius: 8px;
+    // Check the user's answer
+    function checkAnswer() {
+      let userAnswer = $("#inputBox").val();
+      let correctAnswer = stateCapitals[currentState][1];
+      if (userAnswer.toLowerCase() == correctAnswer.toLowerCase()) {
+        numCorrect++;
+      }
+      numAsked++;
+      $("#score").text(numCorrect + "/" + numAsked);
+      if (currentState == stateCapitals.length - 1) {
+        endQuiz();
+      } else {
+        currentState++;
+        updateQuestion();
+        $("#inputBox").val("");
+      }
     }
 
-    .buttonOne {
-      background-color: #006847;
-      color: white;
-      border-radius: 8px;
-      padding: 7px;
+    // Start the quiz
+    function startQuiz() {
+      currentState = 0;
+      numCorrect = 0;
+      numAsked = 0;
+      updateQuestion();
+      $("#beginButton").attr("disabled", true);
+      $("#playAgainButton").attr("disabled", true);
+      $("#inputBox").attr("disabled", false);
+      $("#inputBox").focus();
     }
 
-    .buttonTwo {
-      background-color: #CE1126;
-      color: white;
-      border-radius: 8px;
-      padding: 7px;
+    // End the quiz
+    function endQuiz() {
+      $("#question").text("Quiz complete!");
+      $("#inputBox").attr("disabled", true);
+      $("#playAgainButton").attr("disabled", false);
     }
-  </style>
+
+     // Add event listener to Begin button
+    $("#beginButton").on("click", function() {
+      startQuiz();
+    });
+
+    $("#checkAnswerButton").on("click", function() {
+      checkAnswer();
+    });
+
+    $("#inputBox").on("keydown", function(event) {
+      if (event.keyCode == 13) {
+        checkAnswer();
+      }
+    });
+  });
+  </script>
 </head>
-
 <body>
-  <main>
-    <header>
-      <h1>Capitals of Mexico Quiz</h1>
-    </header>
-    <img src="https://i.imgur.com/agRPqqC.jpg" alt="Mexico flag" width="400">
-    <input type="button" class="buttonOne" value="How to play" onclick="promptIntro()">
-    <input type="button" class="buttonTwo" value="Get started!" onclick="promptMe()">
-
-    <footer>
-      Built by: Weston Ludeke<br>
-      <small>Mexican flag image via Unsplash user @jorgeaguilar</small>
-    </footer>
-  </main>
-
-  <script src="scripts.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <div id="quiz-container">
+    <h1>Quiz: Mexican State Capitals</h1>
+    <p class="question" id="question"></p>
+    <!-- <input type="text" id="inputBox" class="answer-input" onkeydown="if (event.keyCode == 13) checkAnswer();" autocomplete="off"> -->
+    <input type="text" id="inputBox" class="answer-input" autocomplete="off">
+    <p class="score" id="score">0/0</p>
+    <button class="button" id="beginButton">Begin</button>
+    <button class="button" id="checkAnswerButton">Check Answer</button>
+    <button class="button" id="playAgainButton">Play Again</button>
+  </div>
 </body>
 </html>
