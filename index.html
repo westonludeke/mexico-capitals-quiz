@@ -3,67 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Capitals of Mexico Quiz</title>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
 
-<style>
+  <style>
+    @import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
 
-.content {
-  max-width: 500px;
-  margin: auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    main {
+      max-width: 500px;
+      margin: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-img {
-  border-radius: 8px;
-}
+    img {
+      border-radius: 8px;
+    }
 
-.buttonOne {
-  background-color: #006847;
-  color: white;
-  border-radius: 8px;
-  padding: 7px 7px 7px 7px;
-}
+    .buttonOne {
+      background-color: #006847;
+      color: white;
+      border-radius: 8px;
+      padding: 7px;
+    }
 
-.buttonTwo {
-  background-color: #CE1126;
-  color: white;
-  border-radius: 8px;
-  padding: 7px 7px 7px 7px;
-}
-
-@import url('http://necolas.github.io/normalize.css/3.0.2/normalize.css');
-
-</style>
-
+    .buttonTwo {
+      background-color: #CE1126;
+      color: white;
+      border-radius: 8px;
+      padding: 7px;
+    }
+  </style>
 </head>
+
 <body>
+  <main>
+    <header>
+      <h1>Capitals of Mexico Quiz</h1>
+    </header>
+    <img src="https://i.imgur.com/agRPqqC.jpg" alt="Mexico flag" width="400">
+    <input type="button" class="buttonOne" value="How to play" onclick="promptIntro()">
+    <input type="button" class="buttonTwo" value="Get started!" onclick="promptMe()">
 
-<div class="content">	
-		<br><br>
-		<h1>Capitals of Mexico Quiz</h1>
-		<br>
-		
-		<img src="https://i.imgur.com/agRPqqC.jpg" alt="Mexico flag" width="400"> 
-		<br><br>
-		
-		<input type="button" class="buttonOne" value="How to play" onclick="promptIntro()">
-		<br><br>
-		<input type="button" class="buttonTwo" value="Get started!" onclick="promptMe()">
-		<br><br><br>
-		<div id="listDiv">
-		</div>
-		<br><br><br>
-	<footer>
-    Built by: Weston Ludeke<br>
-		<small>Mexican flag image via Unsplash user @jorgeaguilar</small>
-	</footer>
-</div>
+    <footer>
+      Built by: Weston Ludeke<br>
+      <small>Mexican flag image via Unsplash user @jorgeaguilar</small>
+    </footer>
+  </main>
 
-<script src="scripts.js"></script>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="scripts.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </body>
 </html>
